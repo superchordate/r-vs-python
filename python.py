@@ -20,7 +20,7 @@ print( 'Read (s) : ' + str( time.clock() - start_time ) )
 d1 = d0.copy()
 start_time = time.clock()
 d1.usertype = d1.usertype.astype('category')
-print( 'Convert usertype to category : ' + str( round( time.clock() - start_time, 2 ) ) + ' seconds.' )
+print( 'Convert usertype to category : ' + str( round( time.clock() - start_time, 2 ) ) + ' sconds.' )
 
 
 # Filter to Subscriber.
@@ -29,7 +29,8 @@ d1 = d0 >> mask( X.usertype == 'Subscriber' )
 print( 'Filter : ' + str( round( time.clock() - start_time, 2 ) ) + ' seconds.' )
 
 
-# Haversine distance of trip.
+# Distance of trip.
+
 start_time = time.clock()
 d1 = d1 >> mutate(
         
